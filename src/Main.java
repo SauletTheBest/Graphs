@@ -38,5 +38,6 @@ public class Main {
         System.out.println("Path from Tokyo to Kyoto: " + dijkstra.pathTo(targetKyoto));
         System.out.println("Path from Tokyo to Osaka: " + dijkstra.pathTo(targetOsaka));
         System.out.println("Path from Tokyo to Hiroshima: " + dijkstra.pathTo(targetHiroshima));
+
     }
 }
