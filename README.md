@@ -2,7 +2,7 @@
 # Graph Search Algorithms in Java
 
 -**Insturctor: Khaimuldin Nursultan**
--**Student: Saulet Kabdrakhmanov**
+**Student: Saulet Kabdrakhmanov**
 
 ## Overview
 
