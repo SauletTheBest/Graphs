@@ -39,5 +39,10 @@ public class Main {
         System.out.println("Path from Tokyo to Osaka: " + dijkstra.pathTo(targetOsaka));
         System.out.println("Path from Tokyo to Hiroshima: " + dijkstra.pathTo(targetHiroshima));
 
+        System.out.println("\nDFS:");
+        DepthFirstSearch<String> dfs = new DepthFirstSearch<>(source);
+        System.out.println("Path from Tokyo to Kyoto: " + dfs.pathTo(targetKyoto));
+        System.out.println("Path from Tokyo to Osaka: " + dfs.pathTo(targetOsaka));
+        System.out.println("Path from Tokyo to Hiroshima: " + dfs.pathTo(targetHiroshima));
     }
 }
