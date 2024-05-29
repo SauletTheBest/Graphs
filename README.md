@@ -1,9 +1,12 @@
 ---
 # Graph Search Algorithms in Java
 
+-**Insturctor: Khaimuldin Nursultan**
+-**Student: Saulet Kabdrakhmanov**
+
 ## Overview
 
-This assignment involves implementing Breadth-First Search (BFS) and Dijkstra's Algorithm for an edge-weighted graph using a vertex-centric approach. The graph will be modeled using custom `Vertex` and `Edge` classes, and the main graph operations will be handled by the `MyGraph` class. The goal is to create a flexible and reusable graph structure that allows easy addition of vertices and edges, and provides efficient pathfinding capabilities.
+This assignment involves implementing Breadth-First Search (BFS), Depth-First Search (DFS), and Dijkstra's Algorithm for an edge-weighted graph using a vertex-centric approach. The graph will be modeled using custom `Vertex` and `Edge` classes, and the main graph operations will be handled by the `MyGraph` class. The goal is to create a flexible and reusable graph structure that allows easy addition of vertices and edges, and provides efficient pathfinding capabilities.
 
 ## Classes
 
@@ -82,6 +85,14 @@ A class that extends `Search` to implement BFS.
   - `BreadthFirstSearch(Vertex<V> source)`: Constructor to initialize the BFS with the source vertex.
   - `search(Vertex<V> source)`: Performs the BFS starting from the source vertex.
 
+### DepthFirstSearch<V>
+
+A class that extends `Search` to implement DFS.
+
+- **Methods:**
+  - `DepthFirstSearch(Vertex<V> source)`: Constructor to initialize the DFS with the source vertex.
+  - `search(Vertex<V> source)`: Performs the DFS starting from the source vertex.
+
 ### DijkstraSearch<V>
 
 A class that extends `Search` to implement Dijkstra's Algorithm.
@@ -114,7 +125,9 @@ public class Main {
         graph.addEdge("Tokyo", "Nagoya", 4);
         graph.addEdge("Tokyo", "Osaka", 8);
         graph.addEdge("Nagoya", "Kyoto", 2);
-        graph.addEdge("Nagoya", "Osaka", 5);
+        graph.addEdge("Nagoya", "Osaka", 
+
+5);
         graph.addEdge("Kyoto", "Osaka", 1);
         graph.addEdge("Kyoto", "Kobe", 3);
         graph.addEdge("Osaka", "Kobe", 2);
@@ -141,13 +154,19 @@ public class Main {
         System.out.println("Path from Tokyo to Kyoto: " + dijkstra.pathTo(targetKyoto));
         System.out.println("Path from Tokyo to Osaka: " + dijkstra.pathTo(targetOsaka));
         System.out.println("Path from Tokyo to Hiroshima: " + dijkstra.pathTo(targetHiroshima));
+        
+        System.out.println("\nDFS:");
+        DepthFirstSearch<String> dfs = new DepthFirstSearch<>(source);
+        System.out.println("Path from Tokyo to Kyoto: " + dfs.pathTo(targetKyoto));
+        System.out.println("Path from Tokyo to Osaka: " + dfs.pathTo(targetOsaka));
+        System.out.println("Path from Tokyo to Hiroshima: " + dfs.pathTo(targetHiroshima));
     }
 }
 ```
 
 ### Expected Output
 
-The paths and vertices will be printed based on the BFS and Dijkstra's Algorithm implementations. For example:
+The paths and vertices will be printed based on the BFS, DFS, and Dijkstra's Algorithm implementations. For example:
 
 ```
 BFS:
@@ -162,8 +181,13 @@ Dijkstra:
 Path from Tokyo to Kyoto: [Tokyo, Nagoya, Kyoto]
 Path from Tokyo to Osaka: [Tokyo, Nagoya, Kyoto, Osaka]
 Path from Tokyo to Hiroshima: [Tokyo, Nagoya, Kyoto, Osaka, Hiroshima]
+
+DFS:
+Path from Tokyo to Kyoto: [Tokyo, Nagoya, Kyoto]
+Path from Tokyo to Osaka: [Tokyo, Nagoya, Kyoto, Osaka]
+Path from Tokyo to Hiroshima: [Tokyo, Nagoya, Kyoto, Osaka, Hiroshima]
 ```
 
 ## Conclusion
 
-This assignment demonstrates how to implement and use graph data structures and search algorithms in Java. The BFS and Dijkstra's Algorithm provide different methods for finding paths in the graph, showcasing the flexibility and power of graph-based algorithms.
+This assignment demonstrates how to implement and use graph data structures and search algorithms in Java. The BFS, DFS, and Dijkstra's Algorithm provide different methods for finding paths in the graph, showcasing the flexibility and power of graph-based algorithms.
