@@ -1,8 +1,8 @@
 ---
 # Graph Search Algorithms in Java
 
--**Insturctor: Khaimuldin Nursultan**
-**Student: Saulet Kabdrakhmanov**
+- ### **Insturctor: Khaimuldin Nursultan**
+- ### **Student: Saulet Kabdrakhmanov**
 
 ## Overview
 
